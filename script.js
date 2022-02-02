@@ -118,8 +118,69 @@ for(let i=0; i<LatestArray.length; i++){
     }
 }
 console.log("Original array :", LatestArray);
-console.log("Delete element from an array :", NewArray);
+console.log("Delete element from specific element :", NewArray);
 console.log("......................................");
+// 11. Write a js program to count frequency of each element in an array.
+var arr = [2,1,1,3,4,4,5,8,0]
+var frequency = [arr.length]
+visit = -1
+for (let i = 0; i < arr.length; i++) {
+    count = 1 
+    for (let j = i+1; j < arr.length; j++) {
+        if (arr[i] === arr[j]){
+            count = count + 1
+            frequency[j] = visit
+        }
+        
+    }
+    if (frequency[i] !== visit) {
+        frequency[i] = count
+    }     
+}
+console.log(arr);
+console.log("Elements        Frequency");
+for (let i = 0; i < frequency.length; i++) {
+    if (frequency[i] !== visit) {
+        console.log(arr[i],"             ",frequency[i]);
+    }
+    
+}
+console.log("............................................");  
+// 12. Write a js program to print all unique elements in the array.
+var arr = ["usman","ali","omer","ali"]
+var Ne = []
+for (let i = 0; i < arr.length; i++) {
+   if (Ne.indexOf(arr[i]) === -1) {
+       Ne.push(arr[i])
+   }
+    
+}
+console.log(arr);
+console.log("Unique elements :",Ne);
+console.log("....................................");
+// 13. Write a js program to count total number of duplicate elements in an array.
+console.log("same above program no 11");
+console.log("..........................");
+// 14. Write a js program to delete all duplicate elements from an array
+console.log("same above program no 12");
+console.log("..........................");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
