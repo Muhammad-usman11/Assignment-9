@@ -164,6 +164,243 @@ console.log("..........................");
 // 14. Write a js program to delete all duplicate elements from an array
 console.log("same above program no 12");
 console.log("..........................");
+// 15. Write a js program to merge two array to third array.
+var a = [1,2,3,4]
+var b = [5,6,7,8,9]
+var c = [] 
+console.log(a);
+console.log(b);
+for (let i = 0; i < a.length; i++) {
+    c.push(a[i])
+}
+for (let j = 0; j< b.length; j++) {
+    c.push(b[j])
+}
+console.log("Merge two array :",c);
+console.log(".......................................");
+// 16. Write a js program to find reverse of an array.
+var array = [1,2,3,4,5,6,7,8,9]
+var ReverseArray = []
+for (let i=array.length-1; i >= 0; i--) {
+    ReverseArray.push(array[i])
+}
+console.log("Original Array :",array);
+console.log("Reverse Array :",ReverseArray);
+console.log("..........................................");
+// 17. Write a js program to put even and odd elements of array in two separate array.
+var array = [1,2,3,4,5,6,7,8,9,10]
+console.log("Original Array :",array);
+var EvenArray = []
+var OddArray = []
+for (let i = 0; i < array.length; i++) {
+    if (array[i]%2===0) {
+        EvenArray.push(array[i])
+    }
+    if (array[i]%2!==0) {
+        OddArray.push(array[i])
+    }
+    
+}
+console.log("Even Array :",EvenArray);
+console.log("Odd Array :",OddArray);
+console.log("................................");
+// 18. Write a js program to search an element in an array.
+var array = [1,2,3,4,5,6,7,8,9,10]
+var UserInput = 6
+for (let i = 0; i < array.length; i++) {
+    if (array[i]=== UserInput) {
+        console.log("Your number has been matched.");
+        console.log(array[i],"is on",i,"index");
+    }
+    else if (array.indexOf(UserInput)===-1) {
+        console.log(UserInput," does not exist in an array");
+    }
+    
+}
+console.log(".........................................");
+// 19. Write a js program to sort array elements in ascending or descending order.
+var array = [3,4,5,11,1,8,0,6]
+console.log(array);
+
+var SortArray = array.sort((a,b)=>{
+    return a - b 
+} ) 
+console.log("Sorting :",SortArray);
+console.log("...........................");
+// 20. Write a js program to sort even and odd elements of array separately.
+var array = [3,4,5,11,1,8,0,6]
+console.log(array);
+var evenArray = []
+var oddArray = []
+for (let i = 0; i < array.length; i++) {
+    if (array[i]%2==0){
+        evenArray.push(array[i])
+    }
+    else{
+        oddArray.push(array[i])
+    }
+    
+}
+// console.log(evenArray);
+// console.log(oddArray);
+var evenSorting = evenArray.sort((a,b) => a-b)
+var oddSorting = oddArray.sort((a,b) => a-b)
+console.log("Even Sorting :",evenSorting);
+console.log("Odd Sorting :",oddSorting);
+console.log("....................................");
+// 21. Write a js program to left rotate an array.
+var array = [1,2,3,4,5,6]
+console.log("Original Array :",array);
+var rotation = 2
+var RotateArray = array.concat()
+for (let i = 0; i < rotation; i++) {
+   var DeleteItem = RotateArray.shift()
+   RotateArray.push(DeleteItem) 
+}
+console.log("After Rotation :", RotateArray);
+console.log("..................................");
+// 27. Write a js program to check whether a number is even or odd using switch case.
+var userInput = "g"
+console.log("User Input :",userInput);
+switch (userInput%2) {
+    case 0:
+        console.log(userInput,"Even number");   
+        break;
+
+    case 1:
+        console.log(userInput,"Odd number");    
+        break;
+   
+    default:  
+        console.log(userInput,"is wrong");
+}
+console.log(".................................");
+// 23. Write a js program to print day of week name using switch case.
+var userInput = 7
+console.log("Please chose (0....6) number for print week days");
+console.log("User Input :",userInput);
+switch (userInput) {
+    case 0:
+        console.log(userInput,"means","It's Monday!");
+        break;
+    case 1:
+        console.log(userInput,"means","It's Tuesday!");
+        break;
+    case 2:
+        console.log(userInput,"means","It's Wanesday!");
+        break;
+    case 3:
+        console.log(userInput,"means","It's Thursday!");
+        break;     
+    case 4:
+        console.log(userInput,"means","It's Friday!");
+        break;
+    case 5:
+        console.log(userInput,"means","It's Saturday!");
+        break;
+    case 6:
+        console.log(userInput,"means","It's Sunday!");
+        break;        
+    default:
+        console.log(userInput,"Invalid Input");
+        break;
+}
+console.log(".................................");
+// 24. Write a js program print total number of days in a month using switch case.
+var userInput = 14
+console.log("Please chose (1....12) number for print Total number of days");
+console.log("Month number :",userInput);
+switch (userInput) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        console.log("Total number of days : 31");    
+        break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        console.log("Total number of days : 30");
+        break;
+    case 2:
+        console.log("Total number of days : 28 or 29");
+        break;
+    default:
+    console.log("Invalid Input");
+    break;
+}
+console.log(".............................................");
+// 30. Write a js program to create Simple Calculator using switch case.
+var FirstNum = 2
+var SecondeNum = 3
+var ThirdNum = 8
+var UserInput = "-"
+console.log("First Number :",FirstNum);
+console.log("Seconde Number :",SecondeNum);
+console.log("Third Number :",ThirdNum);
+console.log("Choose your operation '+,-,*,/':",UserInput);
+
+switch (UserInput) {
+    case "+":
+        var SumRes = FirstNum+SecondeNum+ThirdNum
+        console.log("Your Sum :",SumRes);
+        break;
+    case "-":
+        var MinusRes = FirstNum-SecondeNum-ThirdNum
+        console.log("Your subtract :",MinusRes);
+        break;
+    case "*":
+        var MultiplyRes = FirstNum*SecondeNum*ThirdNum
+        console.log("Your Multiplication :",MultiplyRes);
+        break;
+    case "/":
+        var DivisionRes = FirstNum/SecondeNum/ThirdNum
+        console.log("Your Division :",DivisionRes);
+        break;
+
+    default:
+        console.log("Error!!");
+        break;
+}
+console.log("........................................");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
